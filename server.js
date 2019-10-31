@@ -1,4 +1,8 @@
-const express = 'express';
+const express = require('express');
+
+const logger = require('./middleware/dateLogger-middleware.js');
+
+const userRouter = require('./users/userRouter.js');
 
 const server = express();
 
@@ -8,8 +12,5 @@ server.get('/', (req, res) => {
 
 //custom middleware
 
-function logger(req, res, next) {
-
-};
 
 module.exports = server;
