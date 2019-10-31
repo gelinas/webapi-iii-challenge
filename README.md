@@ -29,8 +29,8 @@ Follow these steps for completing your project.
 1. Write and implement four custom `middleware` functions, detailed below.
 1. Build an API to let clients perform CRUD operations on `users`.
 1. Add endpoints to retrieve the list of `posts` for a `user` and to store a new `post` for a `user`.
-
-#### Custom Middleware Requirements
+`
+#### Custom Middleware Requiremen`ts
 
 - `logger()`
   - `logger` logs to the console the following information about each request: request method, request url, and a timestamp

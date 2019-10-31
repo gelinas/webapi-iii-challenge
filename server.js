@@ -1,16 +1,23 @@
 const express = require('express');
 
-const logger = require('./middleware/dateLogger-middleware.js');
+const logger = require('./api/logger.js');
 
 const userRouter = require('./users/userRouter.js');
 
 const server = express();
 
-server.get('/', (req, res) => {
+// middleware
+
+server.use(express.json()); // built-in
+
+server.use('/api/users', logger('logger for users'), userRouter);
+
+// routes
+
+server.get('/', logger('logger for server.js'), (req, res) => {
   res.send(`<h2>Let's write some middleware!</h2>`)
 });
 
-//custom middleware
 
 
 module.exports = server;
